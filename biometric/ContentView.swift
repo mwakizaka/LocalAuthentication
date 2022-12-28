@@ -20,15 +20,23 @@ struct ContentView: View {
             }
             .alert("Authentication Result", isPresented: $showingAlert, actions: {
                 Button("OK"){
-                    print("triggered: " + authenticationResult)
-                    showingAlert = false
-                    authenticationResult = "Unknown"
+                    toggleAuthenticationResult(showAlert: false, authenticationResult: "Unknown")
                 }
             }, message: {
                 Text(authenticationResult)
             })
         }
         .padding()
+    }
+    
+    func toggleAuthenticationResult(showAlert: Bool, authenticationResult: String) {
+        if showAlert { // The order matters
+            self.authenticationResult = authenticationResult
+            self.showingAlert = showAlert
+        } else {
+            self.showingAlert = showAlert
+            self.authenticationResult = authenticationResult
+        }
     }
         
     func bitmetricAuthentication() {
