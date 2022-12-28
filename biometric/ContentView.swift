@@ -22,9 +22,14 @@ struct BiometricAuthenticationButton: View {
     var body: some View {
         VStack {
             Button(action: {
-                bitmetricAuthentication(completion: self.toggleAuthenticationResult)
+                let (supported, msg) = supportBiometricAuthentication(biometryName: biometryNames[biometryType.rawValue], biometryType: biometryType)
+                if supported {
+                    bitmetricAuthentication(completion: toggleAuthenticationResult)
+                } else {
+                    toggleAuthenticationResult(showAlert: true, authenticationResult: msg)
+                }
             }){
-                Text("Authenticate with biometric")
+                Text("Authenticate with " + biometryNames[biometryType.rawValue])
             }
             .alert("Authentication Result", isPresented: $showingAlert, actions: {
                 Button("OK"){
@@ -50,21 +55,15 @@ struct BiometricAuthenticationButton: View {
 
 func bitmetricAuthentication(completion:@escaping (Bool, String)->()) {
     let context = LAContext()
-    var error: NSError?
     let description: String = "Authenticate yourself"
-    if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-        context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: description, reply: {success, evaluateError in
-            if (success) {
-                completion(true, "Succeeded")
-            } else {
-                let msg = "Failed: " + evaluateError!.localizedDescription + "\n error code: " + String(evaluateError!._code)
-                completion(true, msg)
-            }
-        })
-    } else {
-        let msg = String(describing: error?.userInfo["NSLocalizedDescription"] ?? "")
-        completion(true, msg)
-    }
+    context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: description, reply: {success, evaluateError in
+        if (success) {
+            completion(true, "Succeeded")
+        } else {
+            let msg = "Failed: " + evaluateError!.localizedDescription + "\n error code: " + String(evaluateError!._code)
+            completion(true, msg)
+        }
+    })
 }
 
 func supportBiometricAuthentication(biometryName: String, biometryType: LABiometryType) -> (supported: Bool, errorMessage: String) {
