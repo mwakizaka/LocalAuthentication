@@ -67,16 +67,14 @@ func bitmetricAuthentication(completion:@escaping (Bool, String)->()) {
     }
 }
 
-func supportBiometricAuthentication(biometryType: LABiometryType) -> (supported: Bool, errorMessage: String) {
+func supportBiometricAuthentication(biometryName: String, biometryType: LABiometryType) -> (supported: Bool, errorMessage: String) {
     let context = LAContext()
     var error: NSError?
     if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
         if (context.biometryType == biometryType) {
             return (true, "")
         } else {
-            let names = ["None", "Touch ID", "Face ID"]
-            let msg = String(names[biometryType.rawValue]) + " is not available"
-            return (false, msg)
+            return (false, biometryName + " is not available")
         }
     } else { // Biometry is not available on this device.
         let errorDescription = error?.userInfo["NSLocalizedDescription"] ?? ""
