@@ -30,7 +30,7 @@ struct ContentView: View {
         }
         .padding()
     }
-    
+        
     func bitmetricAuthentication() {
         let context = LAContext()
         var error: NSError?
@@ -51,6 +51,23 @@ struct ContentView: View {
             print(errorDescription) // Biometry is not available on this device.
             self.showingAlert = true
         }
+    }
+}
+
+func supportBiometricAuthentication(biometryType: LABiometryType) -> (supported: Bool, errorMessage: String) {
+    let context = LAContext()
+    var error: NSError?
+    if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+        if (context.biometryType == biometryType) {
+            return (true, "")
+        } else {
+            let names = ["None", "Touch ID", "Face ID"]
+            let msg = String(names[biometryType.rawValue]) + " is not available"
+            return (false, msg)
+        }
+    } else { // Biometry is not available on this device.
+        let errorDescription = error?.userInfo["NSLocalizedDescription"] ?? ""
+        return (false, String(describing: errorDescription))
     }
 }
 
