@@ -10,13 +10,15 @@ import LocalAuthentication
 
 struct ContentView: View {
     var body: some View {
-        BiometricAuthenticationButton()
+        BiometricAuthenticationButton(biometryType: LABiometryType.touchID)
     }
 }
 
 struct BiometricAuthenticationButton: View {
     @State private var showingAlert = false
     @State private var authenticationResult = "Unknown"
+    private let biometryNames = ["None", "Touch ID", "Face ID"]
+    var biometryType: LABiometryType
     var body: some View {
         VStack {
             Button(action: {
