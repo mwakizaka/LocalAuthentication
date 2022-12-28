@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Button(action: {
-                bitmetricAuthentication()
+                bitmetricAuthentication(completion: self.toggleAuthenticationResult)
             }){
                 Text("Authenticate with biometric")
             }
@@ -38,27 +38,24 @@ struct ContentView: View {
             self.authenticationResult = authenticationResult
         }
     }
-        
-    func bitmetricAuthentication() {
-        let context = LAContext()
-        var error: NSError?
-        let description: String = "Authenticate yourself"
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: description, reply: {success, evaluateError in
-                if (success) {
-                    self.authenticationResult = "Succeeded"
-                    self.showingAlert = true
-                } else {
-                    self.authenticationResult = "Failed: " + evaluateError!.localizedDescription + "\n error code: " + String(evaluateError!._code)
-                    self.showingAlert = true
-                }
-            })
-        } else {
-            let errorDescription = error?.userInfo["NSLocalizedDescription"] ?? ""
-            self.authenticationResult = String(describing: errorDescription)
-            print(errorDescription) // Biometry is not available on this device.
-            self.showingAlert = true
-        }
+}
+
+func bitmetricAuthentication(completion:@escaping (Bool, String)->()) {
+    let context = LAContext()
+    var error: NSError?
+    let description: String = "Authenticate yourself"
+    if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+        context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: description, reply: {success, evaluateError in
+            if (success) {
+                completion(true, "Succeeded")
+            } else {
+                let msg = "Failed: " + evaluateError!.localizedDescription + "\n error code: " + String(evaluateError!._code)
+                completion(true, msg)
+            }
+        })
+    } else {
+        let msg = String(describing: error?.userInfo["NSLocalizedDescription"] ?? "")
+        completion(true, msg)
     }
 }
 
