@@ -9,6 +9,8 @@ import SwiftUI
 import LocalAuthentication
 
 struct ContentView: View {
+    @State private var showingAlert = false
+    @State private var authenticationResult = "Unknown"
     var body: some View {
         VStack {
             Button(action: {
@@ -16,6 +18,15 @@ struct ContentView: View {
             }){
                 Text("Authenticate with biometric")
             }
+            .alert("Authentication Result", isPresented: $showingAlert, actions: {
+                Button("OK"){
+                    print("triggered: " + authenticationResult)
+                    showingAlert = false
+                    authenticationResult = "Unknown"
+                }
+            }, message: {
+                Text(authenticationResult)
+            })
         }
         .padding()
     }
@@ -23,18 +34,22 @@ struct ContentView: View {
     func bitmetricAuthentication() {
         let context = LAContext()
         var error: NSError?
-        let description: String = "Authenticate"
+        let description: String = "Authenticate yourself"
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: description, reply: {success, evaluateError in
                 if (success) {
-                    print("Succeeded to authenticate")
+                    self.authenticationResult = "Succeeded"
+                    self.showingAlert = true
                 } else {
-                    print("Failed to authenticate")
+                    self.authenticationResult = "Failed: " + evaluateError!.localizedDescription + "\n error code: " + String(evaluateError!._code)
+                    self.showingAlert = true
                 }
             })
         } else {
             let errorDescription = error?.userInfo["NSLocalizedDescription"] ?? ""
+            self.authenticationResult = String(describing: errorDescription)
             print(errorDescription) // Biometry is not available on this device.
+            self.showingAlert = true
         }
     }
 }
