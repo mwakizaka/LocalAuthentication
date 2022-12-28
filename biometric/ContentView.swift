@@ -9,6 +9,12 @@ import SwiftUI
 import LocalAuthentication
 
 struct ContentView: View {
+    var body: some View {
+        BiometricAuthenticationButton()
+    }
+}
+
+struct BiometricAuthenticationButton: View {
     @State private var showingAlert = false
     @State private var authenticationResult = "Unknown"
     var body: some View {
