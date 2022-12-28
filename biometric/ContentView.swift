@@ -10,7 +10,10 @@ import LocalAuthentication
 
 struct ContentView: View {
     var body: some View {
-        BiometricAuthenticationButton(biometryType: LABiometryType.touchID)
+        VStack {
+            BiometricAuthenticationButton(biometryType: LABiometryType.touchID)
+            BiometricAuthenticationButton(biometryType: LABiometryType.faceID)
+        }
     }
 }
 
