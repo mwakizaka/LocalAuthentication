@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2965805B295BD3EC000FDB11 /* biometricApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965805A295BD3EC000FDB11 /* biometricApp.swift */; };
+		2965805D295BD3EC000FDB11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965805C295BD3EC000FDB11 /* ContentView.swift */; };
+		2965805F295BD3ED000FDB11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2965805E295BD3ED000FDB11 /* Assets.xcassets */; };
+		29658063295BD3ED000FDB11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29658062295BD3ED000FDB11 /* Preview Assets.xcassets */; };
+		2965806D295BD3ED000FDB11 /* biometricTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965806C295BD3ED000FDB11 /* biometricTests.swift */; };
+		29658077295BD3ED000FDB11 /* biometricUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29658076295BD3ED000FDB11 /* biometricUITests.swift */; };
+		29658079295BD3ED000FDB11 /* biometricUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29658078295BD3ED000FDB11 /* biometricUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29658069295BD3ED000FDB11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2965804F295BD3EC000FDB11 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29658056295BD3EC000FDB11;
+			remoteInfo = biometric;
+		};
+		29658073295BD3ED000FDB11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2965804F295BD3EC000FDB11 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29658056295BD3EC000FDB11;
+			remoteInfo = biometric;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29658057295BD3EC000FDB11 /* biometric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = biometric.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2965805A295BD3EC000FDB11 /* biometricApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = biometricApp.swift; sourceTree = "<group>"; };
+		2965805C295BD3EC000FDB11 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2965805E295BD3ED000FDB11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29658060295BD3ED000FDB11 /* biometric.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = biometric.entitlements; sourceTree = "<group>"; };
+		29658062295BD3ED000FDB11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		29658068295BD3ED000FDB11 /* biometricTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = biometricTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2965806C295BD3ED000FDB11 /* biometricTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = biometricTests.swift; sourceTree = "<group>"; };
+		29658072295BD3ED000FDB11 /* biometricUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = biometricUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29658076295BD3ED000FDB11 /* biometricUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = biometricUITests.swift; sourceTree = "<group>"; };
+		29658078295BD3ED000FDB11 /* biometricUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = biometricUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29658054295BD3EC000FDB11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29658065295BD3ED000FDB11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2965806F295BD3ED000FDB11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2965804E295BD3EC000FDB11 = {
+			isa = PBXGroup;
+			children = (
+				29658059295BD3EC000FDB11 /* biometric */,
+				2965806B295BD3ED000FDB11 /* biometricTests */,
+				29658075295BD3ED000FDB11 /* biometricUITests */,
+				29658058295BD3EC000FDB11 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29658058295BD3EC000FDB11 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29658057295BD3EC000FDB11 /* biometric.app */,
+				29658068295BD3ED000FDB11 /* biometricTests.xctest */,
+				29658072295BD3ED000FDB11 /* biometricUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29658059295BD3EC000FDB11 /* biometric */ = {
+			isa = PBXGroup;
+			children = (
+				2965805A295BD3EC000FDB11 /* biometricApp.swift */,
+				2965805C295BD3EC000FDB11 /* ContentView.swift */,
+				2965805E295BD3ED000FDB11 /* Assets.xcassets */,
+				29658060295BD3ED000FDB11 /* biometric.entitlements */,
+				29658061295BD3ED000FDB11 /* Preview Content */,
+			);
+			path = biometric;
+			sourceTree = "<group>";
+		};
+		29658061295BD3ED000FDB11 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				29658062295BD3ED000FDB11 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2965806B295BD3ED000FDB11 /* biometricTests */ = {
+			isa = PBXGroup;
+			children = (
+				2965806C295BD3ED000FDB11 /* biometricTests.swift */,
+			);
+			path = biometricTests;
+			sourceTree = "<group>";
+		};
+		29658075295BD3ED000FDB11 /* biometricUITests */ = {
+			isa = PBXGroup;
+			children = (
+				29658076295BD3ED000FDB11 /* biometricUITests.swift */,
+				29658078295BD3ED000FDB11 /* biometricUITestsLaunchTests.swift */,
+			);
+			path = biometricUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29658056295BD3EC000FDB11 /* biometric */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2965807C295BD3ED000FDB11 /* Build configuration list for PBXNativeTarget "biometric" */;
+			buildPhases = (
+				29658053295BD3EC000FDB11 /* Sources */,
+				29658054295BD3EC000FDB11 /* Frameworks */,
+				29658055295BD3EC000FDB11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = biometric;
+			productName = biometric;
+			productReference = 29658057295BD3EC000FDB11 /* biometric.app */;
+			productType = "com.apple.product-type.application";
+		};
+		29658067295BD3ED000FDB11 /* biometricTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2965807F295BD3ED000FDB11 /* Build configuration list for PBXNativeTarget "biometricTests" */;
+			buildPhases = (
+				29658064295BD3ED000FDB11 /* Sources */,
+				29658065295BD3ED000FDB11 /* Frameworks */,
+				29658066295BD3ED000FDB11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2965806A295BD3ED000FDB11 /* PBXTargetDependency */,
+			);
+			name = biometricTests;
+			productName = biometricTests;
+			productReference = 29658068295BD3ED000FDB11 /* biometricTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		29658071295BD3ED000FDB11 /* biometricUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29658082295BD3ED000FDB11 /* Build configuration list for PBXNativeTarget "biometricUITests" */;
+			buildPhases = (
+				2965806E295BD3ED000FDB11 /* Sources */,
+				2965806F295BD3ED000FDB11 /* Frameworks */,
+				29658070295BD3ED000FDB11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29658074295BD3ED000FDB11 /* PBXTargetDependency */,
+			);
+			name = biometricUITests;
+			productName = biometricUITests;
+			productReference = 29658072295BD3ED000FDB11 /* biometricUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2965804F295BD3EC000FDB11 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					29658056295BD3EC000FDB11 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					29658067295BD3ED000FDB11 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 29658056295BD3EC000FDB11;
+					};
+					29658071295BD3ED000FDB11 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 29658056295BD3EC000FDB11;
+					};
+				};
+			};
+			buildConfigurationList = 29658052295BD3EC000FDB11 /* Build configuration list for PBXProject "biometric" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2965804E295BD3EC000FDB11;
+			productRefGroup = 29658058295BD3EC000FDB11 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29658056295BD3EC000FDB11 /* biometric */,
+				29658067295BD3ED000FDB11 /* biometricTests */,
+				29658071295BD3ED000FDB11 /* biometricUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29658055295BD3EC000FDB11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29658063295BD3ED000FDB11 /* Preview Assets.xcassets in Resources */,
+				2965805F295BD3ED000FDB11 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29658066295BD3ED000FDB11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29658070295BD3ED000FDB11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29658053295BD3EC000FDB11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2965805D295BD3EC000FDB11 /* ContentView.swift in Sources */,
+				2965805B295BD3EC000FDB11 /* biometricApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29658064295BD3ED000FDB11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2965806D295BD3ED000FDB11 /* biometricTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2965806E295BD3ED000FDB11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29658077295BD3ED000FDB11 /* biometricUITests.swift in Sources */,
+				29658079295BD3ED000FDB11 /* biometricUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2965806A295BD3ED000FDB11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29658056295BD3EC000FDB11 /* biometric */;
+			targetProxy = 29658069295BD3ED000FDB11 /* PBXContainerItemProxy */;
+		};
+		29658074295BD3ED000FDB11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29658056295BD3EC000FDB11 /* biometric */;
+			targetProxy = 29658073295BD3ED000FDB11 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2965807A295BD3ED000FDB11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2965807B295BD3ED000FDB11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		2965807D295BD3ED000FDB11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = biometric/biometric.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"biometric/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mwakizaka.biometric;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2965807E295BD3ED000FDB11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = biometric/biometric.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"biometric/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mwakizaka.biometric;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		29658080295BD3ED000FDB11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mwakizaka.biometricTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/biometric.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/biometric";
+			};
+			name = Debug;
+		};
+		29658081295BD3ED000FDB11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mwakizaka.biometricTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/biometric.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/biometric";
+			};
+			name = Release;
+		};
+		29658083295BD3ED000FDB11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mwakizaka.biometricUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = biometric;
+			};
+			name = Debug;
+		};
+		29658084295BD3ED000FDB11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mwakizaka.biometricUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = biometric;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29658052295BD3EC000FDB11 /* Build configuration list for PBXProject "biometric" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2965807A295BD3ED000FDB11 /* Debug */,
+				2965807B295BD3ED000FDB11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2965807C295BD3ED000FDB11 /* Build configuration list for PBXNativeTarget "biometric" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2965807D295BD3ED000FDB11 /* Debug */,
+				2965807E295BD3ED000FDB11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2965807F295BD3ED000FDB11 /* Build configuration list for PBXNativeTarget "biometricTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29658080295BD3ED000FDB11 /* Debug */,
+				29658081295BD3ED000FDB11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29658082295BD3ED000FDB11 /* Build configuration list for PBXNativeTarget "biometricUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29658083295BD3ED000FDB11 /* Debug */,
+				29658084295BD3ED000FDB11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2965804F295BD3EC000FDB11 /* Project object */;
+}
