@@ -11,6 +11,7 @@ import LocalAuthentication
 struct ContentView: View {
     var body: some View {
         VStack {
+            Text("https://github.com/mwakizaka/LocalAuthentication")
             BiometricAuthenticationButton(biometryType: LABiometryType.touchID)
             BiometricAuthenticationButton(biometryType: LABiometryType.faceID)
         }
@@ -32,7 +33,10 @@ struct BiometricAuthenticationButton: View {
                     toggleAuthenticationResult(showAlert: true, authenticationResult: msg)
                 }
             }){
-                Text("Authenticate with " + biometryNames[biometryType.rawValue])
+                Text("Authenticate with " + biometryNames[biometryType.rawValue]).padding()
+                    .foregroundColor(.white)
+                    .background(.green)
+                    .cornerRadius(8)
             }
             .alert("Authentication Result", isPresented: $showingAlert, actions: {
                 Button("OK"){
