@@ -80,7 +80,7 @@ func supportBiometricAuthentication(biometryName: String, biometryType: LABiomet
         if (context.biometryType == biometryType) {
             return (true, "")
         } else {
-            return (false, biometryName + " is not available")
+            return (false, biometryName + " not supported")
         }
     } else { // Biometry is not available on this device.
         let errorDescription = error?.userInfo["NSLocalizedDescription"] ?? ""
